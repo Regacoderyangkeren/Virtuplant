@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('Welcome'); // halaman welcome
 });
 
+Route::get('/about', function () {
+    return view('about'); // halaman about
+});
+
 Route::get('/register', function () {
     return view('register'); // halaman register
 });
