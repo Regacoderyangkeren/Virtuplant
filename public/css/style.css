@@ -24,6 +24,10 @@
     height: 50vh;
 }
 
+.bg-width-100 {
+    width: 100%;
+}
+
 /* positioning */
 .margin-left {
     margin-left: calc(-50vw + 50%);
@@ -116,6 +120,7 @@ body {
 /* hero */
 .hero {
     margin-top: 0;
+    height: 50vh;
 }
 
 /* half-circle soalnya biar fancy */
@@ -132,7 +137,6 @@ body {
     border-bottom-left-radius: 100% 100%;
     border-bottom-right-radius: 100% 100%;
     margin: 0 auto;
-    bottom: 3rem;
     position: relative;
     overflow: hidden;
 }
