@@ -1,41 +1,239 @@
-.bg-custom-gradient {
-    background: linear-gradient(to right, #16F069 0%, #71F016 100%);
+/* BG */
+.bg-gradient-green {
+    background: linear-gradient(to right, #1b9c4c 0%, #51a316 100%);
 }
 
-.funnel-font {
+.bg-green-alpha-light {
+    background-color: rgba(18, 102, 50, 0.5);
+}
+
+.bg-green-alpha-medium {
+    background-color: rgba(18, 102, 50, 0.8);
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+/* BG size */
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-height-50 {
+    height: 50vh;
+}
+
+/* positioning */
+.margin-left {
+    margin-left: calc(-50vw + 50%);
+}
+
+.margin-right{
+    margin-right: calc(-50vw + 50%);
+}
+
+.margin-bottom {
+    margin-bottom: 3rem;
+}
+
+.padding-bottom {
+    padding-bottom: 3rem;
+}
+
+/* jenis font */
+.font-funnel {
     font-family: 'Funnel Display', sans-serif;
 }
 
-.archivo-font {
+.font-archivo {
     font-family: 'Archivo Black', sans-serif;
 }
 
-.color-lightgreen {
-    color: #16F069;
+/* warna */
+.text-green-primary {
+    color: #1b9c4c;
 }
 
-.font-big {
+.text-green-secondary {
+    color: #51a316;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+/* ukuran font */
+.text-huge {
     font-size: 7rem;
 }
 
-.btn-outline-green {
-    color: #16F069;
-    border-color: #16F069;
-    cursor: pointer;
+.text-med {
+    font-size: 3rem;
+}
+
+.text-navbar {
+    font-size: 1.1rem;
+}
+
+/* ketebalan font */
+.font-bold {
+    font-weight: bold;
+}
+
+/* Border radius */
+.rounded {
+    border-radius: 2vh;
+}
+
+/* transisi */
+.transition-fast {
     transition: 150ms ease-in-out;
 }
 
-.btn-outline-green:hover,
-.btn-outline-green:focus {
-    color: #fff;
-    transform: scale(1.35);
-    background-color: #71F016;
-    border-color: #71F016;
+.transition-smooth {
+    transition: all 0.3s ease;
 }
 
+/* transform */
+.scale-hover {
+    transform: scale(1.1);
+}
+
+/* shadow */
+.shadow-white-glow {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* konten dibawah pre-made */
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* hero */
+.hero {
+    margin-top: 0;
+}
+
+/* half-circle soalnya biar fancy */
+.half-circle-container {
+    position: absolute;
+    width: 100%;
+    margin-top: -3rem;
+}
+
+.half-circle {
+    width: 70%;
+    height: 35rem;
+    background: linear-gradient(to right, rgba(27, 156, 76, 0.8) 0%, rgba(81, 163, 22, 0.8) 100%);
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    margin: 0 auto;
+    bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Tombol */
+.btn-white-outline {
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-weight: bold;
+}
+
+.btn-white-filled {
+    background-color: #ffffff;
+    color: #1b9c4c;
+    border: 2px solid #ffffff;
+    padding: 12px 30px;
+    font-weight: bold;
+}
+
+.btn-green-outline {
+    border: 2px solid #1b9c4c;
+    background: transparent;
+    color: #1b9c4c;
+    padding: 12px 30px;
+    font-weight: bold;
+}
+
+.btn-green-filled {
+    background-color: #1b9c4c;
+    color: #ffffff;
+    border: 2px solid #1b9c4c;
+    padding: 12px 30px;
+    font-weight: bold;
+}
+
+/* nav */
+
+.nav-item-active {
+    background-color: rgba(18, 102, 50, 0.5);
+    border-radius: 2vh;
+    font-weight: bold;
+}
+
+.nav-item-hover {
+    background-color: rgba(18, 102, 50, 0.8);
+    border-radius: 2vh;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Navigasi sama apalah itu hover - hover */
+.nav-link[aria-current="page"] {
+    background-color: rgba(18, 102, 50, 0.5);
+    border-radius: 2vh;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: rgba(18, 102, 50, 0.8);
+    border-radius: 2vh;
+    color: #fff;
+    font-weight: bold;
+    transition: 150ms ease-in-out;
+}
+
+/* hover */
+.btn-white-outline:hover,
+.btn-white-outline:focus {
+    background-color: #ffffff;
+    color: #1b9c4c;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-green-outline:hover,
+.btn-green-outline:focus {
+    background-color: #1b9c4c;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(27, 156, 76, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Animasi logo eak */
 .logo-frames {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,7 +265,6 @@
     100% { background-image: url('../storage/images/logo-anim/Logo\ \(18\).png'); }
 }
 
-
 @keyframes logo-animate-reverse {
     0% { background-image: url('../storage/images/logo-anim/Logo\ \(18\).png'); }
     5.55% { background-image: url('../storage/images/logo-anim/Logo\ \(17\).png'); }
@@ -92,9 +289,9 @@
 
 .logo-frames:hover {
     animation-name: logo-animate-forward;
+    cursor: pointer;
 }
 
 .logo-frames:not(:hover) {
     animation-name: logo-animate-reverse;
 }
-
