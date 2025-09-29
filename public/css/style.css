@@ -33,7 +33,7 @@
     margin-left: calc(-50vw + 50%);
 }
 
-.margin-right{
+.margin-right {
     margin-right: calc(-50vw + 50%);
 }
 
@@ -65,6 +65,10 @@
 
 .text-white {
     color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
 }
 
 /* ukuran font */
@@ -125,30 +129,39 @@ body {
 
 /* half-circle soalnya biar fancy */
 .half-circle-container {
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
+    top: 0;
+    right: 10vh;
     width: 100%;
-    margin-top: -3rem;
+    z-index: -1;
 }
 
 .half-circle {
-    width: 70%;
-    height: 35rem;
+    width: 30%;
+    height: 40rem;
+    justify-content: end;
     background: linear-gradient(to right, rgba(27, 156, 76, 0.8) 0%, rgba(81, 163, 22, 0.8) 100%);
     border-bottom-left-radius: 100% 100%;
     border-bottom-right-radius: 100% 100%;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
-    overflow: hidden;
+    align-self: flex-start;
 }
 
-.circle-text {
+.img-plants {
+    height: 40rem;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    z-index: 2;
+}
+
+.text-container {
+    align-items: center;
+    height: 90vh;
+    display: flex;
 }
 
 /* Tombol */
@@ -185,17 +198,9 @@ body {
 }
 
 /* nav */
-
 .nav-item-active {
     background-color: rgba(18, 102, 50, 0.5);
     border-radius: 2vh;
-    font-weight: bold;
-}
-
-.nav-item-hover {
-    background-color: rgba(18, 102, 50, 0.8);
-    border-radius: 2vh;
-    color: #fff;
     font-weight: bold;
 }
 
@@ -248,47 +253,159 @@ body {
 }
 
 @keyframes logo-animate-forward {
-    0% { background-image: url('../storage/images/logo-anim/Logo\ \(1\).png'); }
-    5.55% { background-image: url('../storage/images/logo-anim/Logo\ \(2\).png'); }
-    11.11% { background-image: url('../storage/images/logo-anim/Logo\ \(3\).png'); }
-    16.66% { background-image: url('../storage/images/logo-anim/Logo\ \(4\).png'); }
-    22.22% { background-image: url('../storage/images/logo-anim/Logo\ \(5\).png'); }
-    27.77% { background-image: url('../storage/images/logo-anim/Logo\ \(6\).png'); }
-    33.33% { background-image: url('../storage/images/logo-anim/Logo\ \(7\).png'); }
-    38.88% { background-image: url('../storage/images/logo-anim/Logo\ \(8\).png'); }
-    44.44% { background-image: url('../storage/images/logo-anim/Logo\ \(9\).png'); }
-    50% { background-image: url('../storage/images/logo-anim/Logo\ \(10\).png'); }
-    55.55% { background-image: url('../storage/images/logo-anim/Logo\ \(11\).png'); }
-    61.11% { background-image: url('../storage/images/logo-anim/Logo\ \(12\).png'); }
-    66.66% { background-image: url('../storage/images/logo-anim/Logo\ \(13\).png'); }
-    72.22% { background-image: url('../storage/images/logo-anim/Logo\ \(14\).png'); }
-    77.77% { background-image: url('../storage/images/logo-anim/Logo\ \(15\).png'); }
-    83.33% { background-image: url('../storage/images/logo-anim/Logo\ \(16\).png'); }
-    88.88% { background-image: url('../storage/images/logo-anim/Logo\ \(17\).png'); }
-    94.44% { background-image: url('../storage/images/logo-anim/Logo\ \(18\).png'); }
-    100% { background-image: url('../storage/images/logo-anim/Logo\ \(18\).png'); }
+    0% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(1\).png');
+    }
+
+    5.55% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(2\).png');
+    }
+
+    11.11% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(3\).png');
+    }
+
+    16.66% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(4\).png');
+    }
+
+    22.22% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(5\).png');
+    }
+
+    27.77% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(6\).png');
+    }
+
+    33.33% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(7\).png');
+    }
+
+    38.88% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(8\).png');
+    }
+
+    44.44% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(9\).png');
+    }
+
+    50% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(10\).png');
+    }
+
+    55.55% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(11\).png');
+    }
+
+    61.11% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(12\).png');
+    }
+
+    66.66% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(13\).png');
+    }
+
+    72.22% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(14\).png');
+    }
+
+    77.77% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(15\).png');
+    }
+
+    83.33% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(16\).png');
+    }
+
+    88.88% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(17\).png');
+    }
+
+    94.44% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(18\).png');
+    }
+
+    100% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(18\).png');
+    }
 }
 
 @keyframes logo-animate-reverse {
-    0% { background-image: url('../storage/images/logo-anim/Logo\ \(18\).png'); }
-    5.55% { background-image: url('../storage/images/logo-anim/Logo\ \(17\).png'); }
-    11.11% { background-image: url('../storage/images/logo-anim/Logo\ \(16\).png'); }
-    16.66% { background-image: url('../storage/images/logo-anim/Logo\ \(15\).png'); }
-    22.22% { background-image: url('../storage/images/logo-anim/Logo\ \(14\).png'); }
-    27.77% { background-image: url('../storage/images/logo-anim/Logo\ \(13\).png'); }
-    33.33% { background-image: url('../storage/images/logo-anim/Logo\ \(12\).png'); }
-    38.88% { background-image: url('../storage/images/logo-anim/Logo\ \(11\).png'); }
-    44.44% { background-image: url('../storage/images/logo-anim/Logo\ \(10\).png'); }
-    50% { background-image: url('../storage/images/logo-anim/Logo\ \(9\).png'); }
-    55.55% { background-image: url('../storage/images/logo-anim/Logo\ \(8\).png'); }
-    61.11% { background-image: url('../storage/images/logo-anim/Logo\ \(7\).png'); }
-    66.66% { background-image: url('../storage/images/logo-anim/Logo\ \(6\).png'); }
-    72.22% { background-image: url('../storage/images/logo-anim/Logo\ \(5\).png'); }
-    77.77% { background-image: url('../storage/images/logo-anim/Logo\ \(4\).png'); }
-    83.33% { background-image: url('../storage/images/logo-anim/Logo\ \(3\).png'); }
-    88.88% { background-image: url('../storage/images/logo-anim/Logo\ \(2\).png'); }
-    94.44% { background-image: url('../storage/images/logo-anim/Logo\ \(1\).png'); }
-    100% { background-image: url('../storage/images/logo-anim/Logo\ \(1\).png'); }
+    0% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(18\).png');
+    }
+
+    5.55% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(17\).png');
+    }
+
+    11.11% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(16\).png');
+    }
+
+    16.66% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(15\).png');
+    }
+
+    22.22% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(14\).png');
+    }
+
+    27.77% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(13\).png');
+    }
+
+    33.33% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(12\).png');
+    }
+
+    38.88% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(11\).png');
+    }
+
+    44.44% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(10\).png');
+    }
+
+    50% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(9\).png');
+    }
+
+    55.55% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(8\).png');
+    }
+
+    61.11% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(7\).png');
+    }
+
+    66.66% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(6\).png');
+    }
+
+    72.22% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(5\).png');
+    }
+
+    77.77% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(4\).png');
+    }
+
+    83.33% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(3\).png');
+    }
+
+    88.88% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(2\).png');
+    }
+
+    94.44% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(1\).png');
+    }
+
+    100% {
+        background-image: url('../storage/images/logo-anim/Logo\ \(1\).png');
+    }
 }
 
 .logo-frames:hover {

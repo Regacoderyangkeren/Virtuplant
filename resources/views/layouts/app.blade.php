@@ -15,28 +15,27 @@
 <body>
     <!-- Header -->
     <header class="text-white p-1 ps-3 pt-1 d-flex bg-gradient-green font-funnel">
-        <div class="logo-frames" id="logoAnimation"></div>
+        <div class="logo-frames ms-4" id="logoAnimation"></div>
         <h2 class="ms-3 mt-1">VirtuPlants</h2>
         <nav class="w-100 d-flex align-items-center me-auto">
             <ul class="nav nav-pills justify-content-center font-funnel ms-auto text-navbar">
                 <li class="nav-item">
-                    <a class="nav-link text-white me-3 transition-fast" aria-current="page" href="/">Home</a>
+                    <a class="nav-link text-white me-4 transition-fast" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white me-3 transition-fast" href="{{ url('/about') }}">About</a>
+                    <a class="nav-link text-white me-4 transition-fast" href="{{ url('/about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white me-3 transition-fast" href="#">Plants</a>
+                    <a class="nav-link text-white me-4 transition-fast" href="#">Plants</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white me-3 transition-fast" href="#">Shop</a>
+                    <a class="nav-link text-white me-4 transition-fast" href="#">Shop</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    {{-- Full-width content section --}}
-    @yield('fullwidth-content')
+    @yield('hero')
 
     <div class="container mt-0">
         <div class="row">

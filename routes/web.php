@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlantController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,3 +18,5 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login'); // halaman login
 });
+
+Route::resource('/plants', PlantController::class);
